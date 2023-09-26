@@ -1,0 +1,12 @@
+@import '../base.blocks/theme.layer/theme.scss';
+
+.header {
+    @extend %theme;
+    @extend %theme_color_default;
+    @extend %theme_space_default;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--indent-s) var(--indent-m);
+}

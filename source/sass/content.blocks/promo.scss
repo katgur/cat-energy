@@ -1,0 +1,31 @@
+@import '../base.blocks/patterns.layer/button.scss';
+@import '../base.blocks/layout.layer/layout.scss';
+
+.promo {
+    @extend %theme;
+    @extend %theme_color_accent;
+    background: url("index-background-mobile.png") no-repeat;
+    background-size: 100%;
+}
+
+.promo__foreground {
+    @include layout__container;
+    @include layout__container_space-v_xl;
+}
+
+.promo__title {
+    @include theme_font_xxl;
+}
+
+.promo__text {
+    @include theme_font_l;
+}
+
+.promo__image {
+    @include theme_font_l;
+    padding: var(--indent-xl) 0;
+}
+
+.promo__button {
+    @include button;
+}

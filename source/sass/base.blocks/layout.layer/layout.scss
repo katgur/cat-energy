@@ -1,0 +1,22 @@
+/* Выравнивание контейнера по горизонтали */
+@mixin layout__container {
+    @extend %theme_space_default;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Внутренние отступы по вертикали */
+@mixin layout__container_space-v_xl {
+    padding: var(--indent-xl) 0;
+}
+
+/* Внешний отступ снизу */
+.layout__container_indent-b_xxl {
+    margin-bottom: var(--indent-xxl);
+}
+
+.layout__container_indent-b_xxxxl {
+    margin-bottom: var(--indent-xxxxl);
+}

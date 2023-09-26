@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Oswald";
+    src: url('../../../font/Oswald-Regular.ttf') format('truetype');
+}
+
+%theme {
+    background-color: var(--bgr-default);
+    border-color: var(--bgr-border);
+    color: var(--text-primary);
+}
+
+%theme_color_default {
+    --bgr-default: #ffffff;
+    --bgr-border: #ededed;
+    --bgr-accent: #68b738;
+
+    --text-primary: #8d8d8d;
+    --text-secondary: #111111;
+    --text-link: #111111;
+}
+
+%theme_color_dark {
+    --bgr-default: #f2f2f2;
+    --bgr-border: #d9d9d9;
+    --bgr-accent: #68b738;
+
+    --text-primary: #444444;
+    --text-secondary: #111111;
+    --text-link: #111111;
+}
+
+%theme_color_accent {
+    --bgr-default: #68b738;
+    --bgr-border: #ffffff;
+    --bgr-accent: #ffffff;
+
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --text-link: #ffffff;
+}
+
+@mixin theme_font_xxl {
+    font-size: 36px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+@mixin theme_font_xl {
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+@mixin theme_font_l {
+    font-size: 14px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@mixin theme_font_m {
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+@mixin theme_font_s {
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+@mixin theme_font_xs {
+    font-size: 12px;
+    font-family: 'Arial', sans-serif;
+}
+
+%theme_space_default {
+    --indent-xxxs: 3px;
+    --indent-xxs: 6px;
+    --indent-xs: 9px;
+    --indent-s: 14px;
+    --indent-m: 20px;
+    --indent-l: 24px;
+    --indent-xl: 29px;
+    --indent-xxl: 32px;
+    --indent-xxxl: 34px;
+    --indent-xxxxl: 51px;
+    --indent-xxxxxl: 72px;
+}
