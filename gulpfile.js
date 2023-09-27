@@ -27,7 +27,7 @@ function fonts() {
 }
 
 function images() {
-    return src("source/image/*.svg,*.png")
+    return src("source/image/*.{png,svg}")
       .pipe(dest('dist/'))
   }
 
