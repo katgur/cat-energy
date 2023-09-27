@@ -1,3 +1,5 @@
+@import '../theme.layer/theme.scss';
+
 /* Выравнивание контейнера по горизонтали */
 @mixin layout__container {
     @extend %theme_space_default;
@@ -13,6 +15,16 @@
 @mixin layout__container_space-v_xl {
     padding-top: var(--indent-xl);
     padding-bottom: var(--indent-xl);
+}
+
+@mixin layout__container_space-v_m {
+    padding-top: var(--indent-m);
+    padding-bottom: var(--indent-m);
+}
+
+@mixin layout__container_space-v_s {
+    padding-top: var(--indent-s);
+    padding-bottom: var(--indent-s);
 }
 
 /* Внутренние отступы по горизонтали */

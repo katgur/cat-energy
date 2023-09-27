@@ -17,6 +17,7 @@ function style() {
         .pipe(concat("index.css"))
         .pipe(replace('../font/', './'))
         .pipe(replace('content.blocks/', './'))
+        .pipe(replace('../image/', './'))
         .pipe(dest("dist/"));
 }
 

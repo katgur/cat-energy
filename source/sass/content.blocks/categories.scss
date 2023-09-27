@@ -1,0 +1,76 @@
+@import '../base.blocks/layout.layer/layout.scss';
+
+.categories {
+    @extend %theme_space_default;
+    @include layout__container;
+    @include layout__container_space-h_m;
+    @include layout__container_space-v_m;
+}
+
+.categories__item {
+    @extend %theme;
+    @extend %theme_color_dark;
+    @include layout__container;
+    @include layout__container_space-h_m;
+    float: left;
+    clear: both;
+    margin-top: var(--indent-m);
+    padding-top: var(--indent-m);
+}
+
+.categories__header {
+    display: flex;
+    align-items: center;
+    float: left;
+    gap: var(--indent-m);
+}
+
+.categories__icon {
+    background: url('Ellipse\ 1\ copy.svg') no-repeat 50%;
+    background-size: 80%;
+    float: left;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.categories__icon>img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.categories__title {
+    @include theme_font_xl;
+    color: var(--text-secondary);
+}
+
+.categories__content {
+    float: left;
+    clear: both;
+    border-bottom: 1px solid var(--bgr-border);
+    padding: var(--indent-m) 0;
+}
+
+.categories__arrow {
+    @include layout__container;
+    @include layout__container_space-v_s;
+    float: left;
+    clear: left;
+}
+
+.categories__text_type_basic {
+    @include theme_font_s;
+}
+
+.categories__text_type_arrow {
+    @include theme_font_l;
+    color: var(--text-secondary);
+}
