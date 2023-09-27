@@ -4,13 +4,17 @@
 .promo {
     @extend %theme;
     @extend %theme_color_accent;
+    @include layout__container;
+    @include layout__container_space-h_m;
     background: url("index-background-mobile.png") no-repeat;
     background-size: 100%;
 }
 
 .promo__foreground {
     @include layout__container;
+    @include layout__container_align_center;
     @include layout__container_space-v_xl;
+    @include layout__container_indent-h_m;
 }
 
 .promo__title {

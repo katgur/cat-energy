@@ -6,9 +6,8 @@
     @extend %theme_space_default;
     @include theme_font_l;
     display: block;
-    border: 0;
-    text-transform: uppercase;
     width: 100%;
+    border: 0;
     padding: var(--indent-s);
     cursor: pointer;
 }

@@ -2,14 +2,29 @@
 @mixin layout__container {
     @extend %theme_space_default;
     display: block;
-    width: fit-content;
+}
+
+@mixin layout__container_align_center {
     margin: 0 auto;
     text-align: center;
 }
 
 /* Внутренние отступы по вертикали */
 @mixin layout__container_space-v_xl {
-    padding: var(--indent-xl) 0;
+    padding-top: var(--indent-xl);
+    padding-bottom: var(--indent-xl);
+}
+
+/* Внутренние отступы по горизонтали */
+@mixin layout__container_space-h_m {
+    padding-left: var(--indent-m);
+    padding-right: var(--indent-m);
+}
+
+/* Внешние отступы по горизонтали */
+@mixin layout__container_indent-h_m {
+    margin-left: var(--indent-m);
+    margin-right: var(--indent-m);
 }
 
 /* Внешний отступ снизу */

@@ -70,7 +70,8 @@ h2 {
 }
 
 .promo__button,
-.promo__foreground {
+.promo__foreground,
+.promo {
   --indent-xxxs: 3px;
   --indent-xxs: 6px;
   --indent-xs: 9px;
@@ -88,6 +89,10 @@ h2 {
 
 /* Внутренние отступы по вертикали */
 
+/* Внутренние отступы по горизонтали */
+
+/* Внешние отступы по горизонтали */
+
 /* Внешний отступ снизу */
 
 .layout__container_indent-b_xxl {
@@ -99,17 +104,21 @@ h2 {
 }
 
 .promo {
+  display: block;
+  padding-left: var(--indent-m);
+  padding-right: var(--indent-m);
   background: url("./index-background-mobile.png") no-repeat;
   background-size: 100%;
 }
 
 .promo__foreground {
   display: block;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 0 auto;
   text-align: center;
-  padding: var(--indent-xl) 0;
+  padding-top: var(--indent-xl);
+  padding-bottom: var(--indent-xl);
+  margin-left: var(--indent-m);
+  margin-right: var(--indent-m);
 }
 
 .promo__title {
@@ -140,9 +149,8 @@ h2 {
   text-transform: uppercase;
   font-weight: 400;
   display: block;
-  border: 0;
-  text-transform: uppercase;
   width: 100%;
+  border: 0;
   padding: var(--indent-s);
   cursor: pointer;
 }
