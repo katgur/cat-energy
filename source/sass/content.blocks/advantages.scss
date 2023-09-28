@@ -6,7 +6,6 @@
 .advantages {
     @extend %theme;
     @extend %theme_color_default;
-    @extend %theme_color_default;
     @extend %theme_space_default;
     @include layout__container;
     @include layout__container_space-h_m;

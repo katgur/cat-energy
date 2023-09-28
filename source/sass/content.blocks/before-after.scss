@@ -1,0 +1,78 @@
+@import '../base.blocks/theme.layer/theme.scss';
+@import '../base.blocks/layout.layer/layout.scss';
+
+.before-after {
+    @extend %theme;
+    @extend %theme_color_dark;
+    @extend %theme_space_default;
+    @include layout__container;
+    @include layout__container_space-h_m;
+    @include layout__container_space-v_xl;
+}
+
+.before-after__title {
+    @include theme_font_xxl;
+    color: var(--text-secondary);
+    margin-bottom: var(--indent-xl);
+}
+
+.before-after__text_type_paragraph {
+    @include theme_font_s;
+}
+
+.before-after__stats {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--indent-xxxl);
+    margin-top: var(--indent-m);
+    margin-bottom: var(--indent-xl);
+}
+
+.before-after__item {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.before-after__text_type_list {
+    @include theme_font_xs;
+    background: var(--bgr-default);
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 0 20%;
+}
+
+.before-after__text_type_accent {
+    @include theme_font_xl;
+    color: var(--text-secondary);
+    display: block;
+    border: 1px solid var(--bgr-border);
+    text-align: center;
+    padding: var(--indent-s) 0;
+}
+
+.before-after__text_type_costs {
+    @include theme_font_l;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.before-after__toggle {
+    text-align: center;
+}
+
+.before-after__image {
+    margin: var(--indent-xl) 0;
+}
+
+.before-after__slider-input {
+    margin: 0 var(--indent-s);
+    vertical-align: middle;
+}
+
+.before-after__text_type_toggle {
+    @include theme_font_l;
+    color: var(--text-secondary);
+}

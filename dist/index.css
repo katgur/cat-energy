@@ -29,7 +29,7 @@
   --indent-l: 24px;
   --indent-xl: 29px;
   --indent-xxl: 32px;
-  --indent-xxxl: 34px;
+  --indent-xxxl: 36px;
   --indent-xxxxl: 51px;
   --indent-xxxxxl: 72px;
 }
@@ -63,7 +63,7 @@
   --indent-l: 24px;
   --indent-xl: 29px;
   --indent-xxl: 32px;
-  --indent-xxxl: 34px;
+  --indent-xxxl: 36px;
   --indent-xxxxl: 51px;
   --indent-xxxxxl: 72px;
 }
@@ -140,6 +140,175 @@
   src: url("./Oswald-Regular.ttf") format("truetype");
 }
 
+.before-after {
+  background-color: var(--bgr-default);
+  border-color: var(--bgr-border);
+  color: var(--text-primary);
+}
+
+.before-after {
+  --bgr-default: #f2f2f2;
+  --bgr-border: #d9d9d9;
+  --bgr-accent: #68b738;
+  --text-primary: #444444;
+  --text-secondary: #111111;
+  --text-link: #111111;
+}
+
+.before-after {
+  --indent-xxxs: 3px;
+  --indent-xxs: 6px;
+  --indent-xs: 9px;
+  --indent-s: 14px;
+  --indent-m: 20px;
+  --indent-l: 24px;
+  --indent-xl: 29px;
+  --indent-xxl: 32px;
+  --indent-xxxl: 36px;
+  --indent-xxxxl: 51px;
+  --indent-xxxxxl: 72px;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald-Regular.ttf") format("truetype");
+}
+
+.before-after {
+  background-color: var(--bgr-default);
+  border-color: var(--bgr-border);
+  color: var(--text-primary);
+}
+
+.before-after {
+  --bgr-default: #f2f2f2;
+  --bgr-border: #d9d9d9;
+  --bgr-accent: #68b738;
+  --text-primary: #444444;
+  --text-secondary: #111111;
+  --text-link: #111111;
+}
+
+.before-after {
+  --indent-xxxs: 3px;
+  --indent-xxs: 6px;
+  --indent-xs: 9px;
+  --indent-s: 14px;
+  --indent-m: 20px;
+  --indent-l: 24px;
+  --indent-xl: 29px;
+  --indent-xxl: 32px;
+  --indent-xxxl: 36px;
+  --indent-xxxxl: 51px;
+  --indent-xxxxxl: 72px;
+}
+
+/* Выравнивание контейнера по горизонтали */
+
+/* Внутренние отступы по вертикали */
+
+/* Внутренние отступы по горизонтали */
+
+/* Внешние отступы по горизонтали */
+
+/* Внешний отступ сверху */
+
+.before-after {
+  display: block;
+  padding-left: var(--indent-m);
+  padding-right: var(--indent-m);
+  padding-top: var(--indent-xl);
+  padding-bottom: var(--indent-xl);
+}
+
+.before-after__title {
+  font-size: 36px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  line-height: 1em;
+  color: var(--text-secondary);
+  margin-bottom: var(--indent-xl);
+}
+
+.before-after__text_type_paragraph {
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.3em;
+}
+
+.before-after__stats {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--indent-xxxl);
+  margin-top: var(--indent-m);
+  margin-bottom: var(--indent-xl);
+}
+
+.before-after__item {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.before-after__text_type_list {
+  font-size: 12px;
+  font-family: "Arial", sans-serif;
+  background: var(--bgr-default);
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0 20%;
+}
+
+.before-after__text_type_accent {
+  font-size: 24px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text-secondary);
+  display: block;
+  border: 1px solid var(--bgr-border);
+  text-align: center;
+  padding: var(--indent-s) 0;
+}
+
+.before-after__text_type_costs {
+  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.before-after__toggle {
+  text-align: center;
+}
+
+.before-after__image {
+  margin: var(--indent-xl) 0;
+}
+
+.before-after__slider-input {
+  margin: 0 var(--indent-s);
+  vertical-align: middle;
+}
+
+.before-after__text_type_toggle {
+  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald-Regular.ttf") format("truetype");
+}
+
 .categories__item {
   background-color: var(--bgr-default);
   border-color: var(--bgr-border);
@@ -166,7 +335,7 @@
   --indent-l: 24px;
   --indent-xl: 29px;
   --indent-xxl: 32px;
-  --indent-xxxl: 34px;
+  --indent-xxxl: 36px;
   --indent-xxxxl: 51px;
   --indent-xxxxxl: 72px;
 }
@@ -295,7 +464,7 @@
   --indent-l: 24px;
   --indent-xl: 29px;
   --indent-xxl: 32px;
-  --indent-xxxl: 34px;
+  --indent-xxxl: 36px;
   --indent-xxxxl: 51px;
   --indent-xxxxxl: 72px;
 }
@@ -358,7 +527,7 @@ p {
   --indent-l: 24px;
   --indent-xl: 29px;
   --indent-xxl: 32px;
-  --indent-xxxl: 34px;
+  --indent-xxxl: 36px;
   --indent-xxxxl: 51px;
   --indent-xxxxxl: 72px;
 }
@@ -396,7 +565,7 @@ p {
   --indent-l: 24px;
   --indent-xl: 29px;
   --indent-xxl: 32px;
-  --indent-xxxl: 34px;
+  --indent-xxxl: 36px;
   --indent-xxxxl: 51px;
   --indent-xxxxxl: 72px;
 }
