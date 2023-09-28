@@ -274,7 +274,7 @@
 }
 
 .before-after__text_type_costs {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -288,6 +288,7 @@
 
 .before-after__image {
   margin: var(--indent-xl) 0;
+  width: 100%;
 }
 
 .before-after__slider-input {
@@ -296,7 +297,7 @@
 }
 
 .before-after__text_type_toggle {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -429,7 +430,7 @@
 }
 
 .categories__text_type_arrow {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -474,6 +475,127 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--indent-s) var(--indent-m);
+}
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald-Regular.ttf") format("truetype");
+}
+
+.invite {
+  background-color: var(--bgr-default);
+  border-color: var(--bgr-border);
+  color: var(--text-primary);
+}
+
+.invite {
+  --bgr-default: #ffffff;
+  --bgr-border: #ededed;
+  --bgr-accent: #68b738;
+  --text-primary: #8d8d8d;
+  --text-secondary: #111111;
+  --text-link: #111111;
+}
+
+.invite {
+  --indent-xxxs: 3px;
+  --indent-xxs: 6px;
+  --indent-xs: 9px;
+  --indent-s: 14px;
+  --indent-m: 20px;
+  --indent-l: 24px;
+  --indent-xl: 29px;
+  --indent-xxl: 32px;
+  --indent-xxxl: 36px;
+  --indent-xxxxl: 51px;
+  --indent-xxxxxl: 72px;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald-Regular.ttf") format("truetype");
+}
+
+.invite {
+  background-color: var(--bgr-default);
+  border-color: var(--bgr-border);
+  color: var(--text-primary);
+}
+
+.invite {
+  --bgr-default: #ffffff;
+  --bgr-border: #ededed;
+  --bgr-accent: #68b738;
+  --text-primary: #8d8d8d;
+  --text-secondary: #111111;
+  --text-link: #111111;
+}
+
+.invite {
+  --indent-xxxs: 3px;
+  --indent-xxs: 6px;
+  --indent-xs: 9px;
+  --indent-s: 14px;
+  --indent-m: 20px;
+  --indent-l: 24px;
+  --indent-xl: 29px;
+  --indent-xxl: 32px;
+  --indent-xxxl: 36px;
+  --indent-xxxxl: 51px;
+  --indent-xxxxxl: 72px;
+}
+
+/* Выравнивание контейнера по горизонтали */
+
+/* Внутренние отступы по вертикали */
+
+/* Внутренние отступы по горизонтали */
+
+/* Внешние отступы по горизонтали */
+
+/* Внешний отступ сверху */
+
+.invite__content {
+  display: flex;
+  gap: var(--indent-m);
+  margin: var(--indent-xl) var(--indent-m);
+}
+
+.invite__text {
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  flex: 1;
+  color: var(--text-secondary);
+}
+
+.invite__address {
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.3em;
+  flex: 1;
+}
+
+.invite__map {
+  position: relative;
+  background: url("./map.png") no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.invite__pin {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .page {
   margin: 0;
@@ -607,22 +729,19 @@ p {
 }
 
 .promo__text {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
 }
 
 .promo__image {
-  font-size: 14px;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
   padding-top: var(--indent-xl);
+  width: 100%;
 }
 
 .promo__button {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 400;

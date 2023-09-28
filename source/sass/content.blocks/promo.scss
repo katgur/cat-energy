@@ -27,8 +27,8 @@
 }
 
 .promo__image {
-    @include theme_font_l;
     padding-top: var(--indent-xl);
+    width: 100%;
 }
 
 .promo__button {
