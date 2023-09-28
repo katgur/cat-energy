@@ -22,14 +22,19 @@ function style() {
 }
 
 function fonts() {
-  return src('source/font/*.ttf')
-    .pipe(dest('dist/'))
+    return src('source/font/*.ttf')
+        .pipe(dest('dist/'))
 }
 
 function images() {
     return src("source/image/*.{png,svg}")
-      .pipe(dest('dist/'))
-  }
+        .pipe(dest('dist/'))
+}
+
+function scripts() {
+    return src("source/js/*.js")
+        .pipe(dest('dist/'))
+}
 
 function serve() {
     server.init({
@@ -40,8 +45,9 @@ function serve() {
         ui: false
     });
 
-    watch("source/sass/**/*.{scss,sass,html}").on("change", series(fonts, style));
+    watch("source/**/*.{scss,sass}").on("change", series(images, style, scripts));
+    watch("source/font/*.ttf").on("change", series(fonts));
 }
 
-exports.build = series(fonts, images, style)
-exports.default = series(fonts, images, style, serve)
+exports.build = series(fonts, images, style, scripts)
+exports.default = series(fonts, images, style, scripts, serve)

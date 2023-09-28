@@ -1,10 +1,13 @@
 @import '../base.blocks/layout.layer/layout.scss';
+@import '../base.blocks/patterns.layer/image.scss';
+@import '../base.blocks/patterns.layer/clearfix.scss';
 
 .categories {
     @extend %theme_space_default;
     @include layout__container;
     @include layout__container_space-h_m;
     @include layout__container_space-v_m;
+    @include clearfix;
 }
 
 .categories__item {
@@ -26,25 +29,16 @@
 }
 
 .categories__icon {
+    @include image;
     background: url('Ellipse\ 1\ copy.svg') no-repeat 50%;
     background-size: 80%;
     float: left;
     width: 60px;
     height: 60px;
-    position: relative;
 }
 
 .categories__icon>img {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    @include image__content_align_center;
 }
 
 .categories__title {

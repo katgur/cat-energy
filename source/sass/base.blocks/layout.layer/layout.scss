@@ -39,11 +39,11 @@
     margin-right: var(--indent-m);
 }
 
-/* Внешний отступ снизу */
-.layout__container_indent-b_xxl {
-    margin-bottom: var(--indent-xxl);
+/* Внешний отступ сверху */
+@mixin layout__container_indent-t_xxl {
+    margin-top: var(--indent-xxl);
 }
 
-.layout__container_indent-b_xxxxl {
-    margin-bottom: var(--indent-xxxxl);
+@mixin layout__container_indent-t_xxxxl {
+    margin-top: var(--indent-xxxxl);
 }

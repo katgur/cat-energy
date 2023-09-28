@@ -1,0 +1,47 @@
+@import '../base.blocks/theme.layer/theme.scss';
+@import '../base.blocks/layout.layer/layout.scss';
+@import '../base.blocks/patterns.layer/image.scss';
+@import '../base.blocks/patterns.layer/clearfix.scss';
+
+.advantages {
+    @extend %theme;
+    @extend %theme_color_default;
+    @extend %theme_color_default;
+    @extend %theme_space_default;
+    @include layout__container;
+    @include layout__container_space-h_m;
+    @include layout__container_space-v_xl;
+    @include clearfix;
+}
+
+.advantages__title {
+    @include theme_font_xxl;
+    float: left;
+    clear: both;
+    color: var(--text-secondary);
+    margin-bottom: var(--indent-m);
+}
+
+.advantages__item {
+    float: left;
+    clear: both;
+    margin-top: var(--indent-m);
+}
+
+.advantages__image {
+    @include image;
+    background: var(--bgr-accent);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    float: left;
+    margin-right: var(--indent-m);
+}
+
+.advantages__image>img {
+    @include image__content_align_center;
+}
+
+.advantages__text {
+    @include theme_font_s;
+}
