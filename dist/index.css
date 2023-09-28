@@ -436,6 +436,118 @@
   font-weight: 400;
   color: var(--text-secondary);
 }
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald-Regular.ttf") format("truetype");
+}
+
+.footer {
+  background-color: var(--bgr-default);
+  border-color: var(--bgr-border);
+  color: var(--text-primary);
+}
+
+.footer {
+  --bgr-default: #f2f2f2;
+  --bgr-border: #d9d9d9;
+  --bgr-accent: #68b738;
+  --text-primary: #444444;
+  --text-secondary: #111111;
+  --text-link: #111111;
+}
+
+.footer {
+  --indent-xxxs: 3px;
+  --indent-xxs: 6px;
+  --indent-xs: 9px;
+  --indent-s: 14px;
+  --indent-m: 20px;
+  --indent-l: 24px;
+  --indent-xl: 29px;
+  --indent-xxl: 32px;
+  --indent-xxxl: 36px;
+  --indent-xxxxl: 51px;
+  --indent-xxxxxl: 72px;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald-Regular.ttf") format("truetype");
+}
+
+.footer {
+  background-color: var(--bgr-default);
+  border-color: var(--bgr-border);
+  color: var(--text-primary);
+}
+
+.footer {
+  --bgr-default: #f2f2f2;
+  --bgr-border: #d9d9d9;
+  --bgr-accent: #68b738;
+  --text-primary: #444444;
+  --text-secondary: #111111;
+  --text-link: #111111;
+}
+
+.footer {
+  --indent-xxxs: 3px;
+  --indent-xxs: 6px;
+  --indent-xs: 9px;
+  --indent-s: 14px;
+  --indent-m: 20px;
+  --indent-l: 24px;
+  --indent-xl: 29px;
+  --indent-xxl: 32px;
+  --indent-xxxl: 36px;
+  --indent-xxxxl: 51px;
+  --indent-xxxxxl: 72px;
+}
+
+/* Выравнивание контейнера по горизонтали */
+
+/* Внутренние отступы по вертикали */
+
+/* Внутренние отступы по горизонтали */
+
+/* Внешние отступы по горизонтали */
+
+/* Внешний отступ сверху */
+
+.footer {
+  display: block;
+  padding-left: var(--indent-m);
+  padding-right: var(--indent-m);
+  padding-top: var(--indent-xxxxl);
+  padding-bottom: var(--indent-xxxxl);
+}
+
+.footer__title {
+  text-align: center;
+}
+
+.footer__socials {
+  display: flex;
+  flex-flow: row wrap;
+  border: solid 1px var(--bgr-border);
+  border-left: 0;
+  border-right: 0;
+  padding: var(--indent-xl) 30%;
+  justify-content: space-between;
+  margin: var(--indent-xl) 0;
+}
+
+.footer__item:first-child {
+  float: left;
+  vertical-align: middle;
+  line-height: 34px;
+}
+
+.footer__item:last-child {
+  float: right;
+}
 @font-face {
   font-family: "Oswald";
   src: url("./Oswald-Regular.ttf") format("truetype");

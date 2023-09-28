@@ -1,0 +1,36 @@
+@import '../base.blocks/theme.layer/theme.scss';
+@import '../base.blocks/layout.layer/layout.scss';
+
+.footer {
+    @extend %theme;
+    @extend %theme_color_dark;
+    @extend %theme_space_default;
+    @include layout__container;
+    @include layout__container_space-h_m;
+    @include layout__container_space-v_xxxxl;
+}
+
+.footer__title {
+    text-align: center;
+}
+
+.footer__socials {
+    display: flex;
+    flex-flow: row wrap;
+    border: solid 1px var(--bgr-border);
+    border-left: 0;
+    border-right: 0;
+    padding: var(--indent-xl) 30%;
+    justify-content: space-between;
+    margin: var(--indent-xl) 0;
+}
+
+.footer__item:first-child {
+    float: left;
+    vertical-align: middle;
+    line-height: 34px;
+}
+
+.footer__item:last-child {
+    float: right;
+}
