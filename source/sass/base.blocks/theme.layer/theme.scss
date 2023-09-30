@@ -75,6 +75,7 @@
 @mixin theme_font_xs {
     font-size: 12px;
     font-family: 'Arial', sans-serif;
+    line-height: 1.4em;
 }
 
 %theme_space_default {

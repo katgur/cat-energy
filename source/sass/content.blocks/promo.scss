@@ -6,8 +6,16 @@
     @extend %theme_color_accent;
     @include layout__container;
     @include layout__container_space-h_m;
-    background: url("index-background-mobile.png") no-repeat;
-    background-size: 100%;
+
+    &_type_top {
+        background: url("index-background-mobile.png") no-repeat;
+        background-size: 100%;
+    }
+
+    &_type_gift {
+        background: url("gift-photo-mobile@1x.png") no-repeat;
+        background-size: 100%;
+    }
 }
 
 .promo__foreground {
@@ -33,4 +41,13 @@
 
 .promo__button {
     @include button;
+}
+
+.promo__gift {
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--indent-xxl);
 }

@@ -23,6 +23,11 @@
     padding-bottom: var(--indent-xl);
 }
 
+@mixin layout__container_space-v_l {
+    padding-top: var(--indent-l);
+    padding-bottom: var(--indent-l);
+}
+
 @mixin layout__container_space-v_m {
     padding-top: var(--indent-m);
     padding-bottom: var(--indent-m);

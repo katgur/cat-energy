@@ -45,8 +45,8 @@ function serve() {
         ui: false
     });
 
-    watch("source/**/*.{scss,sass}").on("change", series(images, style, scripts));
-    watch("source/font/*.ttf").on("change", series(fonts));
+    watch("source/**/*.{scss,sass}").on("change", series(style, server.reload));
+    // watch("source/*.html").on('change', );
 }
 
 exports.build = series(fonts, images, style, scripts)

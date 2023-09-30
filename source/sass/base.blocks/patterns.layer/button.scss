@@ -2,12 +2,11 @@
 
 @mixin button {
     @extend %theme;
-    @extend %theme_color_accent;
     @extend %theme_space_default;
     @include theme_font_l;
     display: block;
-    width: 100%;
     border: 0;
-    padding: var(--indent-s);
+    padding: var(--indent-xs);
     cursor: pointer;
+    text-align: center;
 }

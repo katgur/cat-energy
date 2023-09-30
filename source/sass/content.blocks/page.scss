@@ -1,15 +1,59 @@
+@import '../base.blocks/theme.layer/theme.scss';
+@import '../base.blocks/layout.layer/layout.scss';
+
 .page {
+    @extend %theme;
+    @extend %theme_color_default;
+
     margin: 0;
+
+    &__title {
+        @include layout__container;
+        @include layout__container_space-h_m;
+        @include theme_font_xxl;
+        margin-bottom: var(--indent-xxxl);
+        color: var(--text-secondary);
+    }
+
+    &__section-title {
+        @include layout__container;
+        @include layout__container_space-h_m;
+        @include layout__container_space-v_l;
+        @include theme_font_xl;
+        text-transform: none;
+        color: var(--text-secondary);
+        padding-right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__section-title:after {
+        content: "";
+        display: inline-block;
+        width: 20%;
+        height: 5px;
+        background: var(--bgr-accent);
+        transform: translateY(5px);
+    }
 }
 
-h2 {
+/* nullify */
+h1,
+h2,
+h6 {
     margin: 0;
+    padding: 0;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 p {
