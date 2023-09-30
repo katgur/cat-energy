@@ -38,6 +38,11 @@
     padding-bottom: var(--indent-s);
 }
 
+@mixin layout__container_space-v_xs {
+    padding-top: var(--indent-xs);
+    padding-bottom: var(--indent-xs);
+}
+
 /* Внутренние отступы по горизонтали */
 @mixin layout__container_space-h_m {
     padding-left: var(--indent-m);

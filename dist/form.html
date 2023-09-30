@@ -7,18 +7,14 @@
 
 <body class="page">
     <header class="header">
-        <div class="header__logo">
-            <img src="http://placehold.it/50x50" />
-        </div>
-        <div class="header__title header__title_type_main">
-            <span>Cat energy</span>
-        </div>
-        <div class="header__burger">
-            <img src="http://placehold.it/50x50" />
+        <div class="header__bar">
+            <img src="logo-mobile.svg" />
+            <img src="logo-mobile-header.svg" />
+            <img class="header__icon" src="mobile-menu.svg" />
         </div>
         <menu class="header__menu">
             <ul>
-                <li class="header__item"><a href="#">Главная</a></li>
+                <li class="header__item"><a href="index.html">Главная</a></li>
                 <li class="header__item"><a href="catalog.html">Каталог продукции</a></li>
                 <li class="header__item"><a href="form.html">Подбор программы</a></li>
             </ul>
@@ -60,16 +56,19 @@
                 <h2 class="form__title">Контактные данные (владельца кота)</h2>
                 <div class="form__item">
                     <label for="email" class="form__label">E-mail:*</label>
-                    <input id="email" name="email" class="form__input_type_email" type="email" placeholder="kuklachev@gmail.com" />
+                    <input id="email" name="email" class="form__input_type_email" type="email"
+                        placeholder="kuklachev@gmail.com" />
                 </div>
                 <div class="form__item">
                     <label for="phone" class="form__label">Телефон:*</label>
-                    <input id="phone" name="phone" class="form__input_type_text" type="text" placeholder="8 (960) 900-60-90" />
+                    <input id="phone" name="phone" class="form__input_type_text" type="text"
+                        placeholder="8 (960) 900-60-90" />
                 </div>
             </section>
             <section class="form__section_delimiter_false">
                 <h2 class="form__title">Комментарий</h2>
-                <textarea id="comment" name="comment" class="form__input_type_textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+                <textarea id="comment" name="comment" class="form__input_type_textarea"
+                    placeholder="Расскажите обо всех повадках кота"></textarea>
             </section>
             <section class="form__section_delimiter_false">
                 <h2 class="form__title">Дополнительно</h2>
@@ -121,6 +120,7 @@
             <img src="http://placehold.it/50x50" />
         </div>
     </footer>
+    <script src="menu.js"></script>
 </body>
 
 </html>

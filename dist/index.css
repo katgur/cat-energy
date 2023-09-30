@@ -712,27 +712,15 @@
 .footer__item:last-child {
   float: right;
 }
+@charset "UTF-8";
+
 @font-face {
   font-family: "Oswald";
   src: url("./Oswald-Regular.ttf") format("truetype");
 }
 
-.header {
-  background-color: var(--bgr-default);
-  border-color: var(--bgr-border);
-  color: var(--text-primary);
-}
-
-.header {
-  --bgr-default: #ffffff;
-  --bgr-border: #ededed;
-  --bgr-accent: #68b738;
-  --text-primary: #8d8d8d;
-  --text-secondary: #111111;
-  --text-link: #111111;
-}
-
-.header {
+.header__item,
+.header__bar {
   --indent-xxxs: 3px;
   --indent-xxs: 6px;
   --indent-xs: 9px;
@@ -746,11 +734,77 @@
   --indent-xxxxxl: 72px;
 }
 
+@font-face {
+  font-family: "Oswald";
+  src: url("./Oswald-Regular.ttf") format("truetype");
+}
+
+.header__item,
+.header__bar {
+  --indent-xxxs: 3px;
+  --indent-xxs: 6px;
+  --indent-xs: 9px;
+  --indent-s: 14px;
+  --indent-m: 20px;
+  --indent-l: 24px;
+  --indent-xl: 29px;
+  --indent-xxl: 32px;
+  --indent-xxxl: 36px;
+  --indent-xxxxl: 51px;
+  --indent-xxxxxl: 72px;
+}
+
+/* Выравнивание контейнера по горизонтали */
+
+/* Внутренние отступы по вертикали */
+
+/* Внутренние отступы по горизонтали */
+
+/* Внешние отступы по горизонтали */
+
+/* Внешний отступ сверху */
+
 .header {
+  padding: var(--indent-s) var(--indent-m);
+}
+
+.header__bar {
+  display: block;
+  padding-left: var(--indent-m);
+  padding-right: var(--indent-m);
+  padding-top: var(--indent-xs);
+  padding-bottom: var(--indent-xs);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--indent-s) var(--indent-m);
+}
+
+.header__icon {
+  cursor: pointer;
+  width: 18px;
+}
+
+.header__menu {
+  display: none;
+  text-align: center;
+}
+
+.header__item {
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: var(--indent-xs);
+  padding-bottom: var(--indent-xs);
+  color: var(--text-secondary);
+  border-top: 1px solid var(--bgr-border);
+}
+
+.header__item:last-child {
+  border-bottom: 1px solid var(--bgr-border);
 }
 @charset "UTF-8";
 
@@ -967,7 +1021,7 @@
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   line-height: 1em;
-  margin-bottom: var(--indent-xxxl);
+  margin: var(--indent-xxxl) 0;
   color: var(--text-secondary);
 }
 
@@ -1017,8 +1071,17 @@ a {
   text-decoration: none;
 }
 
+menu,
 p {
   margin: 0;
+  padding: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--text-link);
 }
 @charset "UTF-8";
 
@@ -1434,6 +1497,7 @@ p {
   padding: var(--indent-xs);
   cursor: pointer;
   text-align: center;
+  width: 100%;
 }
 
 .promo__gift {

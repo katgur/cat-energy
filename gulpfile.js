@@ -46,6 +46,7 @@ function serve() {
     });
 
     watch("source/**/*.{scss,sass}").on("change", series(style, server.reload));
+    watch("source/**/*.js").on("change", series(scripts, server.reload));
     // watch("source/*.html").on('change', );
 }
 

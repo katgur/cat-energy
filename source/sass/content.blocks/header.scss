@@ -1,12 +1,38 @@
 @import '../base.blocks/theme.layer/theme.scss';
+@import '../base.blocks/layout.layer/layout.scss';
 
 .header {
-    @extend %theme;
-    @extend %theme_color_default;
-    @extend %theme_space_default;
+    padding: var(--indent-s) var(--indent-m);
+}
 
+.header__bar {
+    @include layout__container;
+    @include layout__container_space-h_m;
+    @include layout__container_space-v_xs;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--indent-s) var(--indent-m);
+}
+
+.header__icon {
+    cursor: pointer;
+    width: 18px;
+}
+
+.header__menu {
+    display: none;
+    text-align: center;
+}
+
+.header__item {
+    @include theme_font_l;
+    @include layout__container;
+    @include layout__container_align_center;
+    @include layout__container_space-v_xs;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--bgr-border);
+}
+
+.header__item:last-child {
+    border-bottom: 1px solid var(--bgr-border);
 }

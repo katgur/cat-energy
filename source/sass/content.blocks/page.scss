@@ -11,7 +11,7 @@
         @include layout__container;
         @include layout__container_space-h_m;
         @include theme_font_xxl;
-        margin-bottom: var(--indent-xxxl);
+        margin: var(--indent-xxxl) 0;
         color: var(--text-secondary);
     }
 
@@ -56,6 +56,12 @@ a {
     text-decoration: none;
 }
 
+menu,
 p {
     margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: var(--text-link);
 }

@@ -41,6 +41,7 @@
 
 .promo__button {
     @include button;
+    width: 100%;
 }
 
 .promo__gift {
