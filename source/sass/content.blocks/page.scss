@@ -36,6 +36,12 @@
         background: var(--bgr-accent);
         transform: translateY(5px);
     }
+
+    &__text {
+        @include layout__container;
+        @include layout__container_space-h_m;
+        @include theme_font_l;
+    }
 }
 
 /* nullify */

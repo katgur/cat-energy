@@ -1,0 +1,109 @@
+@import '../base.blocks/theme.layer/theme.scss';
+@import '../base.blocks/layout.layer/layout.scss';
+@import '../base.blocks/patterns.layer/button.scss';
+
+.form {
+    &__section_delimiter_true {
+        @include layout__container;
+        @include layout__container_space-h_m;
+        @include layout__container_space-v_m;
+        border-bottom: 1px solid var(--bgr-border);
+    }
+
+    &__section_delimiter_false {
+        @include layout__container;
+        @include layout__container_indent-h_m;
+    }
+
+    &__item {
+        display: flex;
+        gap: var(--indent-s);
+        margin: var(--indent-xs) 0;
+        align-items: center;
+    }
+
+    &__input {
+        padding: var(--indent-xs);
+        border: 1px solid var(--bgr-border);
+    }
+
+    &__input_type_text,
+    &__input_type_email,
+    &__input_type_number {
+        @include theme_font_l;
+        color: var(--text-secondary);
+        flex: 1;
+    }
+
+    &__input_type_radio {
+        appearance: none;
+        border-radius: 50%;
+        border: 8px solid #FFF;
+        box-shadow: 0 0 0 1px var(--bgr-border);
+    }
+
+    &__input_type_radio:checked {
+        background: var(--bgr-accent);
+        box-shadow: 0 0 0 1px var(--bgr-accent);
+    }
+
+    &__input_type_checkbox {
+        appearance: none;
+        width: 2em;
+        height: 2em;
+        cursor: pointer;
+    }
+
+    &__input_type_checkbox:checked {
+        background: url('tick.svg') no-repeat;
+        background-size: 18px;
+        background-position: 50%;
+    }
+
+    &__input_type_textarea {
+        @include theme_font_l;
+        box-sizing: border-box;
+        width: 100%;
+        height: 150px;
+        resize: none;
+    }
+
+    &__label {
+        @include theme_font_l;
+        color: var(--text-secondary);
+    }
+
+    &__section-title {
+        @include layout__container;
+        @include layout__container_space-v_l;
+        @include theme_font_xl;
+        text-transform: none;
+        color: var(--text-secondary);
+        padding-right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__section-title:after {
+        content: "";
+        display: inline-block;
+        width: 20%;
+        height: 5px;
+        background: var(--bgr-accent);
+        transform: translateY(5px);
+    }
+
+    &__button {
+        @extend %theme_color_accent;
+        @include button;
+        width: 100%;
+        margin-top: var(--indent-l);
+    }
+
+    &__text {
+        @include theme_font_s;
+        text-align: center;
+        margin-top: var(--indent-s);
+    }
+}

@@ -3,6 +3,7 @@
 
 <head>
     <title>Cat Energy</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body class="page">
@@ -22,102 +23,112 @@
     </header>
     <main>
         <h1 class="page__title">Подбор программы</h1>
-        <p class="page__text"></p>
+        <p class="page__text">
+            Заполните анкету и мы подберем программу питания для вашего кота
+        </p>
         <form class="form" action="https://echo.htmlacademy.ru">
             <section class="form__section_delimiter_true">
                 <div class="form__item">
                     <label for="name" class="form__label">Имя:*</label>
-                    <input id="name" name="name" class="form__input_type_text" type="text" placeholder="Барсик" />
+                    <input id="name" name="name" class="form__input form__input_type_text" type="text"
+                        placeholder="Барсик" />
                 </div>
                 <div class="form__item">
                     <label for="weight" class="form__label">Вес (кг):*</label>
-                    <input id="weight" name="weight" class="form__input_type_number" type="number" placeholder="7" />
+                    <input id="weight" name="weight" class="form__input form__input_type_number" type="number"
+                        placeholder="7" />
                 </div>
                 <div class="form__item">
                     <label for="age" class="form__label">Возраст (лет):</label>
-                    <input id="age" name="age" class="form__input_type_number" type="number" placeholder="7" />
+                    <input id="age" name="age" class="form__input form__input_type_number" type="number"
+                        placeholder="7" />
                 </div>
             </section>
             <section class="form__section_delimiter_true">
                 <div class="form__item">
-                    <input id="weight-loss" name="weight-loss" class="form__input_type_radio" type="radio" checked />
+                    <input id="weight-loss" name="weight" value="weight-loss" class="form__input form__input_type_radio"
+                        type="radio" checked />
                     <label for="weight-loss" class="form__label">Похудение</label>
                 </div>
                 <div class="form__item">
-                    <input id="weight-gain" name="weight-gain" class="form__input_type_radio" type="radio" />
+                    <input id="weight-gain" name="weight" value="weight-gain" class="form__input form__input_type_radio"
+                        type="radio" />
                     <label for="weight-gain" class="form__label">Набор массы</label>
                 </div>
                 <div class="form__item">
-                    <input id="advice" name="advice" class="form__input_type_radio" type="radio" />
+                    <input id="advice" name="weight" value="advice" class="form__input form__input_type_radio"
+                        type="radio" />
                     <label for="advice" class="form__label">Не знаю (Нужен ваш совет)</label>
                 </div>
             </section>
             <section class="form__section_delimiter_false">
-                <h2 class="form__title">Контактные данные (владельца кота)</h2>
+                <h2 class="form__section-title">Контактные данные (владельца кота)</h2>
                 <div class="form__item">
                     <label for="email" class="form__label">E-mail:*</label>
-                    <input id="email" name="email" class="form__input_type_email" type="email"
+                    <input id="email" name="email" class="form__input form__input_type_email" type="email"
                         placeholder="kuklachev@gmail.com" />
                 </div>
                 <div class="form__item">
                     <label for="phone" class="form__label">Телефон:*</label>
-                    <input id="phone" name="phone" class="form__input_type_text" type="text"
+                    <input id="phone" name="phone" class="form__input form__input_type_text" type="text"
                         placeholder="8 (960) 900-60-90" />
                 </div>
             </section>
             <section class="form__section_delimiter_false">
-                <h2 class="form__title">Комментарий</h2>
-                <textarea id="comment" name="comment" class="form__input_type_textarea"
+                <h2 class="form__section-title">Комментарий</h2>
+                <textarea id="comment" name="comment" class="form__input form__input_type_textarea"
                     placeholder="Расскажите обо всех повадках кота"></textarea>
             </section>
             <section class="form__section_delimiter_false">
-                <h2 class="form__title">Дополнительно</h2>
+                <h2 class="form__section-title">Дополнительно</h2>
                 <ul class="form__list">
                     <li class="form__item">
-                        <input id="sweetener" name="sweetener" class="form__input_type_checkbox" type="checkbox" />
+                        <input id="sweetener" name="sweetener" class="form__input form__input_type_checkbox"
+                            type="checkbox" />
                         <label for="sweetener" class="form__label">Сахарозаменитель</label>
                     </li>
                     <li class="form__item">
-                        <input id="water" name="water" class="form__input_type_checkbox" type="checkbox" />
+                        <input id="water" name="water" class="form__input form__input_type_checkbox" type="checkbox" />
                         <label for="water" class="form__label">Питьевая вода</label>
                     </li>
                     <li class="form__item">
-                        <input id="milk" name="milk" class="form__input_type_checkbox" type="checkbox" />
+                        <input id="milk" name="milk" class="form__input form__input_type_checkbox" type="checkbox" />
                         <label for="milk" class="form__label">Молоко</label>
                     </li>
                     <li class="form__item">
-                        <input id="vitamin" name="vitamin" class="form__input_type_checkbox" type="checkbox" />
+                        <input id="vitamin" name="vitamin" class="form__input form__input_type_checkbox"
+                            type="checkbox" />
                         <label for="vitamin" class="form__label">Витамины</label>
                     </li>
                 </ul>
             </section>
-            <button class="form__button" type="submit">Отправить заявку</button>
-            <p class="form__text">* — Обязательные поля</p>
+            <section class="form__section_delimiter_false">
+                <button class="form__button" type="submit">Отправить заявку</button>
+                <p class="form__text">* — Обязательные поля</p>
+            </section>
         </form>
+        <section class="invite">
+            <div class="invite__content">
+                <h2 class="invite__text">Приглашаем к сотрудничеству дилеров</h2>
+                <p class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            </div>
+            <div class="invite__map">
+                <img class="invite__pin" src="map-pin@1x.png" />
+            </div>
+        </section>
     </main>
-    <div class="invite">
-        <h2 class="invite__text">Приглашаем к сотрудничеству дилеров</h2>
-        <p class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <div class="invite__map"></div>
-    </div>
     <footer class="footer">
-        <div class="title title_type_main">
-            <span>Cat energy</span>
+        <div class="footer__title">
+            <img src="footer-logo.svg" />
         </div>
-        <div class="socials">
-            <div class="socials__item">
-                <img src="http://placehold.it/50x50" />
-            </div>
-            <div class="socials__item">
-                <img src="http://placehold.it/50x50" />
-            </div>
-            <div class="socials__item">
-                <img src="http://placehold.it/50x50" />
-            </div>
+        <div class="footer__socials">
+            <img src="m-vk.svg" />
+            <img src="m-insta.svg" />
+            <img src="m-fb.svg" />
         </div>
-        <div class="academy">
-            <span>HTML Academy</span>
-            <img src="http://placehold.it/50x50" />
+        <div class="footer__academy">
+            <span class="footer__item">HTML Academy</span>
+            <img class="footer__item" src="htmlacademy.svg" />
         </div>
     </footer>
     <script src="menu.js"></script>
