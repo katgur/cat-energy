@@ -6,6 +6,17 @@ const autoprefixer = require("autoprefixer");
 const concat = require("gulp-concat-css")
 const replace = require("gulp-replace")
 const server = require("browser-sync").create();
+const gulpclean = require('gulp-clean');
+
+function clean() {
+    return src('dist/', { read: false })
+        .pipe(gulpclean());
+}
+
+function html() {
+    return src("source/*.html")
+        .pipe(dest("dist/"));
+}
 
 function style() {
     return src("source/sass/*/*.scss")
@@ -15,40 +26,36 @@ function style() {
             autoprefixer()
         ]))
         .pipe(concat("index.css"))
-        .pipe(replace('../font/', './'))
-        .pipe(replace('content.blocks/', './'))
-        .pipe(replace('../image/', './'))
-        .pipe(dest("dist/"));
+        .pipe(replace('../font/', './fonts/'))
+        .pipe(replace('../image/', './images/'))
+        .pipe(dest("dist/style/"));
 }
 
 function fonts() {
     return src('source/font/*.ttf')
-        .pipe(dest('dist/'))
+        .pipe(dest('dist/fonts/'))
 }
 
 function images() {
     return src("source/image/*.{png,svg}")
-        .pipe(dest('dist/'))
+        .pipe(dest('dist/images'))
 }
 
 function scripts() {
     return src("source/js/*.js")
-        .pipe(dest('dist/'))
+        .pipe(dest('dist/js'))
 }
 
 function serve() {
     server.init({
-        server: "dist/",
-        notify: false,
-        open: true,
-        cors: true,
-        ui: false
+        server: 'dist',
+        cors: true
     });
 
+    watch("source/*.html").on("change", series(html, server.reload));
     watch("source/**/*.{scss,sass}").on("change", series(style, server.reload));
     watch("source/**/*.js").on("change", series(scripts, server.reload));
-    // watch("source/*.html").on('change', );
 }
 
-exports.build = series(fonts, images, style, scripts)
-exports.default = series(fonts, images, style, scripts, serve)
+exports.build = series(clean, html, fonts, images, style, scripts)
+exports.default = series(clean, html, fonts, images, style, scripts, serve)

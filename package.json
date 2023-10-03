@@ -20,5 +20,9 @@
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "sass": "^1.68.0"
+  },
+  "dependencies": {
+    "del": "^7.1.0",
+    "gulp-clean": "^0.4.0"
   }
 }
