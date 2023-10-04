@@ -1,0 +1,14 @@
+.animation__scale-in {
+    animation-duration: 1.5s;
+    animation-name: scalein;
+}
+
+@keyframes scalein {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
