@@ -77,9 +77,9 @@
         @include layout__container;
         @include layout__container_space-v_l;
         @include theme_font_xl;
+        margin-left: var(--indent-m);
         text-transform: none;
         color: var(--text-secondary);
-        padding-right: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
