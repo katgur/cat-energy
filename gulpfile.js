@@ -26,8 +26,9 @@ function style() {
             autoprefixer()
         ]))
         .pipe(concat("index.css"))
-        .pipe(replace('../font/', './fonts/'))
-        .pipe(replace('../image/', './images/'))
+        .pipe(replace('content.blocks/', './'))
+        .pipe(replace('./images/', '../images/'))
+        .pipe(replace('fonts/', '../fonts/'))
         .pipe(dest("dist/style/"));
 }
 

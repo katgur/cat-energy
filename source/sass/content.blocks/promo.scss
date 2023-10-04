@@ -8,12 +8,12 @@
     @include layout__container_space-h_m;
 
     &_type_top {
-        background: url("index-background-mobile.png") no-repeat;
+        background: url("images/index-background-mobile.png") no-repeat;
         background-size: 100%;
     }
 
     &_type_gift {
-        background: url("gift-photo-mobile@1x.png") no-repeat;
+        background: url("images/gift-photo-mobile@1x.png") no-repeat;
         background-size: 100%;
     }
 }

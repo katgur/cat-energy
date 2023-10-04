@@ -4,10 +4,10 @@ document.addEventListener('readystatechange', event => {
             isOpen = !isOpen;
             if (isOpen) {
                 menu.style.display = 'block';
-                icon.src = 'm-close.svg';
+                icon.src = 'images/m-close.svg';
             } else {
                 menu.style.display = 'none';
-                icon.src = 'mobile-menu.svg';
+                icon.src = 'images/mobile-menu.svg';
             }
         };
 
