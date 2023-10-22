@@ -2,6 +2,7 @@
 @import '../base.blocks/layout.layer/layout.scss';
 @import '../base.blocks/patterns.layer/image.scss';
 @import '../base.blocks/patterns.layer/clearfix.scss';
+@import '../base.blocks/layout.layer/grid.scss';
 
 .advantages {
     @extend %theme;
@@ -43,4 +44,72 @@
 
 .advantages__text {
     @include theme_font_s;
+}
+
+@mixin advantages__background {
+    @include theme_font_xxl;
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 160pt;
+    line-height: 1em;
+    position: absolute;
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    .advantages__list {
+        @include grid__container_columns_2;
+        float: left;
+        row-gap: var(--indent-xxxxxl);
+    }
+
+    .advantages__item {
+        width: 70%;
+        position: relative;
+    }
+
+    .advantages__item:nth-child(1):before {
+        @include advantages__background;
+        content: "1";
+    }
+
+    .advantages__item:nth-child(2)::before {
+        @include advantages__background;
+        content: "2";
+    }
+
+    .advantages__item:nth-child(3)::before {
+        @include advantages__background;
+        content: "3";
+    }
+
+    .advantages__item:nth-child(4)::before {
+        @include advantages__background;
+        content: "4";
+    }
+
+    .advantages__image {
+        margin-bottom: var(--indent-xxl);
+    }
+
+    .advantages__text {
+        float: left;
+    }
+
+    .advantages__text {
+        line-height: 1.8em;
+    }
+}
+
+@media (min-width: 1088px) {
+    .advantages {
+        @include layout__container_space-h_xxxxxl;
+    }
+
+    .advantages__list {
+        @include grid__container_columns_4;
+    }
+
+    .advantages__item {
+        width: 90%;
+    }
 }

@@ -49,6 +49,11 @@
     padding-right: var(--indent-m);
 }
 
+@mixin layout__container_space-h_xxxxxl {
+    padding-left: var(--indent-xxxxxl);
+    padding-right: var(--indent-xxxxxl);
+}
+
 /* Внешние отступы по горизонтали */
 @mixin layout__container_indent-h_m {
     margin-left: var(--indent-m);

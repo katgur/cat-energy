@@ -1,13 +1,19 @@
 @import '../base.blocks/layout.layer/layout.scss';
 @import '../base.blocks/patterns.layer/image.scss';
 @import '../base.blocks/patterns.layer/clearfix.scss';
+@import '../base.blocks/layout.layer/grid.scss';
 
 .categories {
     @extend %theme_space_default;
-    @include layout__container;
+    @include grid__container_columns_1;
     @include layout__container_space-h_m;
     @include layout__container_space-v_m;
-    @include clearfix;
+}
+
+@media (min-width: 1088px) {
+    .categories {
+        @include grid__container_columns_2;
+    }
 }
 
 .categories__item {
@@ -21,43 +27,40 @@
     padding-top: var(--indent-m);
 }
 
-.categories__header {
-    display: flex;
-    align-items: center;
-    float: left;
-    gap: var(--indent-m);
-}
-
 .categories__icon {
     @include image;
-    background: url('Ellipse\ 1\ copy.svg') no-repeat 50%;
+    background: url('./images/Ellipse\ 1\ copy.svg') no-repeat 50%;
     background-size: 80%;
     float: left;
     width: 60px;
     height: 60px;
+    margin-right: var(--indent-m);
 }
 
 .categories__icon>img {
     @include image__content_align_center;
+    width: 100%;
 }
 
 .categories__title {
     @include theme_font_xl;
     color: var(--text-secondary);
+    vertical-align: middle;
+    line-height: 2.5em;
 }
 
 .categories__content {
     float: left;
-    clear: both;
-    border-bottom: 1px solid var(--bgr-border);
+    clear: left;
     padding: var(--indent-m) 0;
 }
 
 .categories__arrow {
     @include layout__container;
     @include layout__container_space-v_s;
+    border-top: 1px solid var(--bgr-border);
     float: left;
-    clear: left;
+    width: 100%;
 }
 
 .categories__text_type_basic {
@@ -67,4 +70,39 @@
 .categories__text_type_arrow {
     @include theme_font_l;
     color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+    .categories__item {
+        padding: var(--indent-xxl);
+    }
+
+    .categories__content {
+        width: 60%;
+    }
+
+    .categories__icon {
+        float: right;
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+    }
+
+    .categories__arrow {
+        border: 0;
+        width: 60%;
+    }
+}
+
+@media (min-width: 1088px) {
+    .categories__icon {
+        float: left;
+        width: 70px;
+        height: 70px;
+        margin-right: var(--indent-m);
+    }
+
+    .categories__content {
+        width: 100%;
+    }
 }
