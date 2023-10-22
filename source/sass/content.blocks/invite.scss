@@ -4,14 +4,15 @@
 
 .invite {
     @extend %theme;
-    @extend %theme_color_default;
+    @extend %theme_color_dark;
     @extend %theme_space_default;
+    padding-top: var(--indent-xs);
 }
 
 .invite__content {
     display: flex;
     gap: var(--indent-m);
-    margin: var(--indent-xl) var(--indent-m);
+    margin: var(--indent-m);
 }
 
 .invite__text {

@@ -5,13 +5,12 @@
     @extend %theme;
     @extend %theme_color_dark;
     @extend %theme_space_default;
-    @include layout__container;
-    @include layout__container_space-h_m;
-    @include layout__container_space-v_xxxxl;
+    padding-bottom: var(--indent-xl);
 }
 
 .footer__title {
     text-align: center;
+    margin-top: var(--indent-xl);
 }
 
 .footer__socials {
@@ -25,12 +24,7 @@
     margin: var(--indent-xl) 0;
 }
 
-.footer__item:first-child {
-    float: left;
-    vertical-align: middle;
-    line-height: 34px;
-}
-
-.footer__item:last-child {
-    float: right;
+.footer__academy {
+    display: flex;
+    justify-content: space-around;
 }
