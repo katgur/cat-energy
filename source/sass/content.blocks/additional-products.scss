@@ -21,12 +21,14 @@
     @include theme_font_l;
     color: var(--text-secondary);
     margin-bottom: var(--indent-xs);
+    align-self: center;
 }
 
 .additional-products__text {
     @include theme_font_s;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .additional-products__button {
@@ -34,4 +36,32 @@
     @include button;
     width: 100%;
     margin: var(--indent-s) 0;
+}
+
+@media (min-width: 768px) {
+    .additional-products__item {
+        border: 1px solid var(--bgr-border);
+        padding: var(--indent-m);
+    }
+}
+
+@media (min-width: 1088px) {
+    .additional-products__item {
+        display: flex;
+        align-items: stretch;
+        border: 0;
+        border-top: 1px solid var(--bgr-border);
+    }
+
+    .additional-products__item > * {
+        flex: 1 100%;
+      }
+
+    .additional-products__item:last-child {
+        border-bottom: 1px solid var(--bgr-border);
+    }
+
+    .additional-products__text {
+        justify-content: space-around;
+    }
 }

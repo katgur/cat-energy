@@ -2,7 +2,7 @@
 
 /* Выравнивание контейнера по горизонтали */
 @mixin layout__container {
-    @extend %theme_space_default;
+    @include theme_space_default;
     display: block;
 }
 
@@ -47,6 +47,11 @@
 @mixin layout__container_space-h_m {
     padding-left: var(--indent-m);
     padding-right: var(--indent-m);
+}
+
+@mixin layout__container_space-h_xxl {
+    padding-left: var(--indent-xxl);
+    padding-right: var(--indent-xxl);
 }
 
 @mixin layout__container_space-h_xxxxxl {

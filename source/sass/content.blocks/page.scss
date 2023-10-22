@@ -44,7 +44,26 @@
     }
 }
 
+@media (min-width: 768px) {
+    .page {
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1088px) {
+    .page {
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+
 /* nullify */
+
+body {
+    margin: 0;
+}
+
 h1,
 h2,
 h6 {

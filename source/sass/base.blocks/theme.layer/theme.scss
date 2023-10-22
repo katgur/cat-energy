@@ -11,9 +11,15 @@
     color: var(--text-primary);
 }
 
+@mixin theme {
+    background-color: var(--bgr-default);
+    border-color: var(--bgr-border);
+    color: var(--text-primary);
+}
+
 %theme_color_default {
     --bgr-default: #ffffff;
-    --bgr-border: #ededed;
+    --bgr-border: #dadada;
     --bgr-accent: #68b738;
 
     --text-primary: #8d8d8d;
@@ -22,6 +28,16 @@
 }
 
 %theme_color_dark {
+    --bgr-default: #f2f2f2;
+    --bgr-border: #d9d9d9;
+    --bgr-accent: #68b738;
+
+    --text-primary: #444444;
+    --text-secondary: #111111;
+    --text-link: #111111;
+}
+
+@mixin theme_color_dark {
     --bgr-default: #f2f2f2;
     --bgr-border: #d9d9d9;
     --bgr-accent: #68b738;
@@ -81,6 +97,20 @@
 }
 
 %theme_space_default {
+    --indent-xxxs: 3px;
+    --indent-xxs: 6px;
+    --indent-xs: 9px;
+    --indent-s: 14px;
+    --indent-m: 20px;
+    --indent-l: 24px;
+    --indent-xl: 29px;
+    --indent-xxl: 32px;
+    --indent-xxxl: 36px;
+    --indent-xxxxl: 51px;
+    --indent-xxxxxl: 72px;
+}
+
+@mixin theme_space_default {
     --indent-xxxs: 3px;
     --indent-xxs: 6px;
     --indent-xs: 9px;
