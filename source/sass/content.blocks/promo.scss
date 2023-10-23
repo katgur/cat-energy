@@ -4,8 +4,6 @@
 .promo {
     @extend %theme;
     @extend %theme_color_accent;
-    @include layout__container;
-    @include layout__container_space-h_m;
 
     &_type_top {
         background: url("images/index-background-mobile.png") no-repeat;
@@ -15,14 +13,15 @@
     &_type_gift {
         background: url("images/gift-photo-mobile@1x.png") no-repeat;
         background-size: 100%;
+        background-position: 0 65%;
+        flex: 1;
     }
 }
 
 .promo__foreground {
     @include layout__container;
     @include layout__container_align_center;
-    @include layout__container_space-v_xl;
-    @include layout__container_indent-h_m;
+    width: 100%;
 }
 
 .promo__title {
@@ -36,7 +35,6 @@
 
 .promo__image {
     padding-top: var(--indent-xl);
-    width: 100%;
 }
 
 .promo__button {
@@ -44,11 +42,25 @@
     width: 100%;
 }
 
-.promo__gift {
-    height: 300px;
+.promo__foreground_type_gift {
+    height: 200px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     gap: var(--indent-xxl);
+}
+
+@media (min-width: 1200px) {
+    .promo_type_gift {
+        width: auto;
+    }
+
+    .promo__foreground_type_gift {
+        height: 100%;
+    }
+
+    .promo__text {
+        padding: 0 var(--indent-s);
+    }
 }

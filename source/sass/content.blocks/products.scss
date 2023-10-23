@@ -107,16 +107,18 @@
                 }
 
                 &_more {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
                     border: 1px solid var(--bgr-border);
                 }
             }
         }
 
+        &__content {
+            margin-top: var(--indent-xxxxxl);
+        }
+
         &__title {
             text-align: center;
+            margin-top: var(--indent-xs);
         }
 
         &__qualities {
@@ -127,10 +129,23 @@
             border-bottom: 1px solid var(--bgr-border);
             padding: var(--indent-xs);
         }
+
+        &__text {
+            margin-top: var(--indent-xs);
+        }
+
+        &__button {
+            &_color {    
+                &_gray {
+                    margin-top: var(--indent-xxxxxl);
+                }
+            }
+        }
+    
     }
 }
 
-@media (min-width: 1088px) {
+@media (min-width: 1200px) {
     .products {
         &__list {
             @include grid__container_columns_4;
