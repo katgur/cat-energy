@@ -4,10 +4,10 @@
 @import '../base.blocks/layout.layer/grid.scss';
 
 .categories {
-    @extend %theme_space_default;
     @include grid__container_columns_1;
     @include layout__container_space-h_m;
     @include layout__container_space-v_m;
+    @include clearfix;
 }
 
 @media (min-width: 1200px) {
@@ -72,7 +72,7 @@
     color: var(--text-secondary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .categories__item {
         padding: var(--indent-xxl);
     }

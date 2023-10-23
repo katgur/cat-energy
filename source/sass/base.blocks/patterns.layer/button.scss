@@ -4,7 +4,6 @@
     @extend %theme;
     @extend %theme_space_default;
     @include theme_font_l;
-    display: block;
     border: 0;
     padding: var(--indent-xs);
     cursor: pointer;

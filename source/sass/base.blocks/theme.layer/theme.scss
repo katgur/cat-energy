@@ -27,6 +27,17 @@
     --text-link: #111111;
 }
 
+
+@mixin theme_color_default {
+    --bgr-default: #ffffff;
+    --bgr-border: #dadada;
+    --bgr-accent: #68b738;
+
+    --text-primary: #8d8d8d;
+    --text-secondary: #111111;
+    --text-link: #111111;
+}
+
 %theme_color_dark {
     --bgr-default: #f2f2f2;
     --bgr-border: #d9d9d9;
@@ -48,6 +59,16 @@
 }
 
 %theme_color_accent {
+    --bgr-default: #68b738;
+    --bgr-border: #ffffff;
+    --bgr-accent: #ffffff;
+
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --text-link: #ffffff;
+}
+
+@mixin theme_color_accent {
     --bgr-default: #68b738;
     --bgr-border: #ffffff;
     --bgr-accent: #ffffff;

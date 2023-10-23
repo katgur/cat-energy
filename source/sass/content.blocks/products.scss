@@ -83,7 +83,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .products {
         &__list {
             @include grid__container_columns_2;

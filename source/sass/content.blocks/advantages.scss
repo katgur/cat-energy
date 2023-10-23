@@ -55,7 +55,7 @@
     right: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .advantages__list {
         @include grid__container_columns_2;
         float: left;
