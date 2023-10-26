@@ -2,17 +2,20 @@
 @import '../base.blocks/layout.layer/layout.scss';
 
 .header {
-    padding: var(--indent-s) var(--indent-m);
-    border-bottom: 1px solid var(--bgr-border);
-}
-
-.header__bar {
     @include layout__container;
     @include layout__container_space-h_m;
     @include layout__container_space-v_xs;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--bgr-border);
+}
+
+.header__bar {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
 }
 
 .header__icon {
@@ -23,6 +26,7 @@
 .header__menu {
     display: none;
     text-align: center;
+    flex-basis: 100%;
 }
 
 .header__item {
@@ -36,4 +40,56 @@
 
 .header__item:last-child {
     border-bottom: 1px solid var(--bgr-border);
+}
+
+@media (min-width: 700px) {
+    .header__icon {
+        display: none;
+    }
+
+    .header__bar {
+        justify-content: flex-start;
+        flex-basis: 20%;
+        gap: var(--indent-s);
+        padding: var(--indent-m);
+    }
+
+    .header__logo {
+        margin-right: var(--indent-s);
+    }
+
+    .header__menu {
+        display: block;
+        flex-basis: 70%;
+        margin-left: auto;
+    }
+
+    .header__item {
+        display: inline;
+        margin-left: var(--indent-m);
+        margin-right: var(--indent-m);
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        @include layout__container_space-v_m;
+        @include layout__container_space-h_xxl;
+    }
+
+    .header__menu {
+        flex-basis: 50%;
+    }
+
+    .header__item {
+        border: 0;
+    }
+
+    .header__item:last-child {
+        border: 0;
+    }
+
+    .header__item_color_accent {
+        @include theme_color_accent;
+    }
 }
