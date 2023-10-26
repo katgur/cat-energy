@@ -8,30 +8,53 @@
     @include layout__container;
     @include layout__container_space-h_m;
     @include layout__container_space-v_xl;
+    display: grid;
+    row-gap: var(--indent-m);
+    column-gap: var(--indent-s);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "paragraph paragraph"
+        "stats1 stats2"
+        "profit profit"
+        "toggle toggle";
+    align-items: center;
 }
 
 .before-after__title {
     @include theme_font_xxl;
     color: var(--text-secondary);
-    margin-bottom: var(--indent-xl);
+    grid-area: title;
 }
 
 .before-after__text_type_paragraph {
     @include theme_font_s;
-}
-
-.before-after__stats {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--indent-xxxl);
-    margin-top: var(--indent-m);
-    margin-bottom: var(--indent-xl);
+    grid-area: paragraph;
+    place-self: center;
 }
 
 .before-after__item {
-    flex: 1;
     position: relative;
     text-align: center;
+}
+
+.before-after__item:nth-child(1) {
+    grid-area: stats1;
+}
+
+.before-after__item:nth-child(2) {
+    grid-area: stats2;
+}
+
+.before-after__profit {
+    color: var(--text-secondary);
+    text-align: center;
+    grid-area: profit;
+    place-self: center;
+}
+
+.before-after__text_type_costs {
+    @include theme_font_l;
 }
 
 .before-after__text_type_list {
@@ -53,14 +76,9 @@
     padding: var(--indent-s) 0;
 }
 
-.before-after__text_type_costs {
-    @include theme_font_l;
-    color: var(--text-secondary);
-    text-align: center;
-}
-
 .before-after__toggle {
     text-align: center;
+    grid-area: toggle;
 }
 
 .before-after__image {
@@ -76,4 +94,63 @@
 .before-after__text_type_toggle {
     @include theme_font_l;
     color: var(--text-secondary);
+}
+
+@media (min-width: 700px) {
+    .before-after__title {
+        font-size: 36pt;
+    }
+
+    .before-after {
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-areas:
+            "title title title"
+            "paragraph paragraph paragraph"
+            "stats1 stats2 profit"
+            "toggle toggle toggle";
+        background: transparent;
+    }
+
+    .before-after::after {
+        content: "";
+        background: linear-gradient(white 40%, var(--bgr-default) 40%);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .before-after__text_type_list {
+        background: white;
+    }
+}
+
+@media (min-width: 1200px) {
+    .before-after {
+        grid-template-columns: 1fr 1fr 4fr;
+        grid-template-rows: 1fr 1fr 64px 64px;
+        grid-template-areas:
+            "title title toggle"
+            "paragraph paragraph toggle"
+            "stats1 stats2 toggle"
+            "profit profit toggle";
+    }
+
+    .before-after::after {
+        background: linear-gradient(white 30%, var(--bgr-default) 30%);
+        height: 50%;
+    }
+
+    .before-after__text_type_list {
+        background: var(--bgr-default);
+    }
+
+    .before-after__toggle {
+        margin-left: 100px;
+    }
+
+    .before-after__image {
+        margin: 0;
+    }
 }
