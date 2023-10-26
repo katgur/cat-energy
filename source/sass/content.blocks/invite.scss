@@ -4,7 +4,7 @@
 
 .invite {
     @extend %theme;
-    @extend %theme_color_dark;
+    @extend %theme_color_default;
     @extend %theme_space_default;
     padding-top: var(--indent-xs);
 }
@@ -35,4 +35,41 @@
 
 .invite__pin {
     @include image__content_align_center;
+}
+
+@media (min-width: 700px) {
+    .invite__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 200px;
+        padding: var(--indent-m);
+    }
+
+    .invite__map {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .invite {
+        position: relative;
+        padding: 0;
+    }
+
+    .invite__content {
+        position: absolute;
+        z-index: 1;
+        background-color: var(--bgr-default);
+        width: 40%;
+        padding: var(--indent-xxxxl);
+        top: 33%;
+    }
+
+    .invite__map {
+        height: 500px;
+    }
+
+    .invite__pin {
+        left: 50%;
+    }
 }
