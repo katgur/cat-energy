@@ -4,6 +4,8 @@
 .page {
     @extend %theme;
     @extend %theme_color_default;
+    --bgr-default: transparent;
+
 
     margin: 0;
 

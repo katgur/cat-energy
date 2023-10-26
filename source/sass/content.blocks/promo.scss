@@ -4,13 +4,13 @@
 .promo {
     @extend %theme;
     @extend %theme_color_accent;
-    margin-bottom: 200px;
 
     &_type_top {
         background: url("images/index-background-mobile.png") no-repeat, rgb(105, 174, 60);
         height: 300px;
         background-size: 50%;
         background-position: 50% 50%;
+        margin-bottom: 200px;
     }
 
     &_type_gift {
@@ -24,7 +24,6 @@
 .promo__foreground {
     @include layout__container;
     @include layout__container_align_center;
-    position: relative;
     width: 300px;
 }
 
@@ -46,8 +45,6 @@
 .promo__button {
     @include button;
     width: 100%;
-    position: absolute;
-    bottom: -20px;
 }
 
 .promo__foreground_type_gift {
@@ -62,70 +59,78 @@
 @media (min-width: 700px) {
     .promo_type_top {
         @include theme_color_default;
-        background: white;
+        background: url('images/index-can-mobile.png') no-repeat;
+        background-size: 70%;
+        background-position: 70% 100%;
         color: var(--text-secondary);
-        display: table;
-        float: left;
-        clear: both;
-        height: fit-content;
-        margin-bottom: var(--indent-m);
+        margin-bottom: 0;
+        height: 650px;
     }
 
     .promo__foreground {
-        display: block;
-        margin: 0 auto;
         text-align: left;
-        position: relative;
+        width: 400px;
+        margin: 0;
+        margin-left: 15%
     }
 
     .promo__title {
-        position: absolute;
-        top: var(--indent-m);
-        width: 300px;
-        left: 100px;
-        display: block;
-        z-index: 1;
+        font-size: 36pt;
     }
 
     .promo__text {
-        display: block;
-        position: absolute;
-        top: 140px;
-        left: 100px;
-        z-index: 1;
+        font-size: 14pt;
+        margin-top: var(--indent-xl);
     }
 
     .promo__image {
-        width: 400px;
-        padding: 0;
-        z-index: 0;
-        margin-top: 150px;
-        margin-left: 150px;
+        display: none;
     }
 
     .promo__button {
         @include theme_color_accent;
-        position: absolute;
-        top: 200px;
-        left: 100px;
-        bottom: auto;
-        width: fit-content;
-        padding-left: var(--indent-l);
-        padding-right: var(--indent-l);
-        z-index: 1;
+        font-size: 14pt;
+        width: auto;
+        margin-top: var(--indent-xxl);
+        padding-left: var(--indent-m);
+        padding-right: var(--indent-m);
     }
 }
 
 @media (min-width: 1200px) {
+    .promo_type_top {
+        @include theme_color_default;
+        background: url('images/index-can-mobile.png') no-repeat;
+        background-size: 40%;
+        background-position: 65% 30%;
+        color: var(--text-secondary);
+        margin-bottom: 0;
+        height: 600px;
+    }
+
+    .promo_type_top::after {
+        display: block;
+        content: "";
+        width: 50%;
+        height: 600px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background: url("images/index-background-mobile.png") no-repeat, rgb(105, 174, 60);
+        background-position: 200% 0;
+    }
+
+    .promo__foreground {
+        margin-left: 5%;
+        padding-top: var(--indent-xxxxxl);
+    }
+
     .promo_type_gift {
         width: auto;
     }
 
     .promo__foreground_type_gift {
         height: 100%;
-    }
-
-    .promo__text {
-        padding: 0 var(--indent-s);
     }
 }
