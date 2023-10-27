@@ -83,7 +83,6 @@
 
 .before-after__image {
     margin: var(--indent-xl) 0;
-    width: 100%;
 }
 
 .before-after__slider-input {
@@ -152,5 +151,12 @@
 
     .before-after__image {
         margin: 0;
+    }
+}
+
+@media (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+    .before-after__image {
+        width: 100%;
     }
 }

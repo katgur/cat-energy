@@ -38,7 +38,7 @@ function fonts() {
 }
 
 function images() {
-    return src("source/image/*.{png,svg}")
+    return src("source/image/*.{png,svg,webp}")
         .pipe(dest('dist/images'))
 }
 
