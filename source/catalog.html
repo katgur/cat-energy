@@ -9,9 +9,18 @@
 
 <body>
     <header class="header">
-        <img class="header__logo" src="images/logo-mobile.svg" />
-        <img src="images/logo-mobile-header.svg" />
-        <img class="header__icon" src="images/mobile-menu.svg" />
+        <div class="header__bar">
+            <picture class="products__picture">
+                <source media="(min-width: 1200px)" srcset="images/ico-cat-big.svg">
+                <source media="(min-width: 700px)" srcset="images/ico-cat-medium.svg">
+                <img class="header__logo" src="images/ico-cat-small.svg" />
+            </picture>
+            <picture class="products__picture">
+                <source media="(min-width: 700px)" src="images/logo-name-tablet.svg">
+                <img src="images/logo-name.svg" />
+            </picture>
+            <img class="header__icon" src="images/mobile-menu.svg" />
+        </div>
         <menu class="header__menu">
             <a class="header__item" href="index.html">Главная</a>
             <a class="header__item" href="catalog.html">Каталог продукции</a>
@@ -23,9 +32,11 @@
         <section class="products">
             <ul class="products__list">
                 <li class="products__item products__item_type_product">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="images/catalog-1-desktop.png 1x, images/catalog-1-desktop@2x.png 2x">
-                        <source media="(min-width: 700px)" srcset="images/catalog-1-tablet.png 1x, images/catalog-1-tablet@2x.png 2x">
+                    <picture class="products__picture">
+                        <source media="(min-width: 1200px)"
+                            srcset="images/catalog-1-desktop.png 1x, images/catalog-1-desktop@2x.png 2x">
+                        <source media="(min-width: 700px)"
+                            srcset="images/catalog-1-tablet.png 1x, images/catalog-1-tablet@2x.png 2x">
                         <img src="images/catalog-1-mobile.png" class="products__image" />
                     </picture>
                     <h6 class="products__title">Cat energy Pro<br>500 Г</h6>
@@ -43,12 +54,14 @@
                             <span class="products__text_size_s">700 Р.</span>
                         </li>
                     </ul>
-                    <a href="form.html" class="products__button_color_accent">Заказать</a>
+                    <a href="form.html" class="products__button products__button_color_accent">Заказать</a>
                 </li>
                 <li class="products__item products__item_type_product">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="images/catalog-2-desktop.png 1x, images/catalog-2-desktop@2x.png 2x">
-                        <source media="(min-width: 700px)" srcset="images/catalog-2-tablet.png 1x, images/catalog-2-tablet@2x.png 2x">
+                    <picture class="products__picture">
+                        <source media="(min-width: 1200px)"
+                            srcset="images/catalog-2-desktop.png 1x, images/catalog-2-desktop@2x.png 2x">
+                        <source media="(min-width: 700px)"
+                            srcset="images/catalog-2-tablet.png 1x, images/catalog-2-tablet@2x.png 2x">
                         <img src="images/catalog-2-mobile.png" class="products__image" />
                     </picture>
                     <h6 class="products__title">Cat energy Pro<br>500 Г</h6>
@@ -66,12 +79,14 @@
                             <span class="products__text_size_s">700 Р.</span>
                         </li>
                     </ul>
-                    <a href="form.html" class="products__button_color_accent">Заказать</a>
+                    <a href="form.html" class="products__button products__button_color_accent">Заказать</a>
                 </li>
                 <li class="products__item products__item_type_product">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="images/catalog-3-desktop.png 1x, images/catalog-3-desktop@2x.png 2x">
-                        <source media="(min-width: 700px)" srcset="images/catalog-3-tablet.png 1x, images/catalog-3-tablet@2x.png 2x">
+                    <picture class="products__picture">
+                        <source media="(min-width: 1200px)"
+                            srcset="images/catalog-3-desktop.png 1x, images/catalog-3-desktop@2x.png 2x">
+                        <source media="(min-width: 700px)"
+                            srcset="images/catalog-3-tablet.png 1x, images/catalog-3-tablet@2x.png 2x">
                         <img src="images/catalog-3-mobile.png" class="products__image" />
                     </picture>
                     <h6 class="products__title">Cat energy Pro<br>500 Г</h6>
@@ -89,12 +104,14 @@
                             <span class="products__text_size_s">700 Р.</span>
                         </li>
                     </ul>
-                    <a href="form.html" class="products__button_color_accent">Заказать</a>
+                    <a href="form.html" class="products__button products__button_color_accent">Заказать</a>
                 </li>
                 <li class="products__item products__item_type_product">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="images/catalog-4-desktop.png 1x, images/catalog-4-desktop@2x.png 2x">
-                        <source media="(min-width: 700px)" srcset="images/catalog-4-tablet.png 1x, images/catalog-4-tablet@2x.png 2x">
+                    <picture class="products__picture">
+                        <source media="(min-width: 1200px)"
+                            srcset="images/catalog-4-desktop.png 1x, images/catalog-4-desktop@2x.png 2x">
+                        <source media="(min-width: 700px)"
+                            srcset="images/catalog-4-tablet.png 1x, images/catalog-4-tablet@2x.png 2x">
                         <img src="images/catalog-4-mobile.png" class="products__image" />
                     </picture>
                     <h6 class="products__title">Cat energy Pro<br>500 Г</h6>
@@ -112,12 +129,14 @@
                             <span class="products__text_size_s">700 Р.</span>
                         </li>
                     </ul>
-                    <a href="form.html" class="products__button_color_accent">Заказать</a>
+                    <a href="form.html" class="products__button products__button_color_accent">Заказать</a>
                 </li>
                 <li class="products__item products__item_type_product">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="images/catalog-1-desktop.png 1x, images/catalog-1-desktop@2x.png 2x">
-                        <source media="(min-width: 700px)" srcset="images/catalog-1-tablet.png 1x, images/catalog-1-tablet@2x.png 2x">
+                    <picture class="products__picture">
+                        <source media="(min-width: 1200px)"
+                            srcset="images/catalog-1-desktop.png 1x, images/catalog-1-desktop@2x.png 2x">
+                        <source media="(min-width: 700px)"
+                            srcset="images/catalog-1-tablet.png 1x, images/catalog-1-tablet@2x.png 2x">
                         <img src="images/catalog-1-mobile.png" class="products__image" />
                     </picture>
                     <h6 class="products__title">Cat energy Pro<br>500 Г</h6>
@@ -135,12 +154,14 @@
                             <span class="products__text_size_s">700 Р.</span>
                         </li>
                     </ul>
-                    <a href="form.html" class="products__button_color_accent">Заказать</a>
+                    <a href="form.html" class="products__button products__button_color_accent">Заказать</a>
                 </li>
                 <li class="products__item products__item_type_product">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="images/catalog-2-desktop.png 1x, images/catalog-2-desktop@2x.png 2x">
-                        <source media="(min-width: 700px)" srcset="images/catalog-2-tablet.png 1x, images/catalog-2-tablet@2x.png 2x">
+                    <picture class="products__picture">
+                        <source media="(min-width: 1200px)"
+                            srcset="images/catalog-2-desktop.png 1x, images/catalog-2-desktop@2x.png 2x">
+                        <source media="(min-width: 700px)"
+                            srcset="images/catalog-2-tablet.png 1x, images/catalog-2-tablet@2x.png 2x">
                         <img src="images/catalog-2-mobile.png" class="products__image" />
                     </picture>
                     <h6 class="products__title">Cat energy Pro<br>500 Г</h6>
@@ -158,12 +179,14 @@
                             <span class="products__text_size_s">700 Р.</span>
                         </li>
                     </ul>
-                    <a href="form.html" class="products__button_color_accent">Заказать</a>
+                    <a href="form.html" class="products__button products__button_color_accent">Заказать</a>
                 </li>
                 <li class="products__item products__item_type_product">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="images/catalog-3-desktop.png 1x, images/catalog-3-desktop@2x.png 2x">
-                        <source media="(min-width: 700px)" srcset="images/catalog-3-tablet.png 1x, images/catalog-3-tablet@2x.png 2x">
+                    <picture class="products__picture">
+                        <source media="(min-width: 1200px)"
+                            srcset="images/catalog-3-desktop.png 1x, images/catalog-3-desktop@2x.png 2x">
+                        <source media="(min-width: 700px)"
+                            srcset="images/catalog-3-tablet.png 1x, images/catalog-3-tablet@2x.png 2x">
                         <img src="images/catalog-3-mobile.png" class="products__image" />
                     </picture>
                     <h6 class="products__title">Cat energy Pro<br>500 Г</h6>
@@ -181,18 +204,16 @@
                             <span class="products__text_size_s">700 Р.</span>
                         </li>
                     </ul>
-                    <a href="form.html" class="products__button_color_accent">Заказать</a>
+                    <a href="form.html" class="products__button products__button_color_accent">Заказать</a>
                 </li>
                 <li class="products__item products__item_type_more">
-                    <div class="products__content">
-                        <picture>
-                            <source media="(min-width: 700px)" srcset="images/ico-plus-big.svg">
-                            <img src="./images/plus-mobile.svg" class="products__image" />
-                        </picture>
-                        <h6 class="products__title">Показать еще 100500 товаров</h6>
-                        <p class="products__text products__text_size_s">На самом деле вкусов гораздо больше!</p>
-                        <button class="products__button_color_gray">Показать все</button>
-                    </div>
+                    <picture class="products__picture">
+                        <source media="(min-width: 700px)" srcset="images/ico-plus-big.svg">
+                        <img src="./images/plus-mobile.svg" />
+                    </picture>
+                    <h6 class="products__title">Показать еще 100500 товаров</h6>
+                    <p class="products__text products__text_size_s">На самом деле вкусов гораздо больше!</p>
+                    <button class="products__button products__button_color_gray">Показать все</button>
                 </li>
             </ul>
         </section>
@@ -249,21 +270,23 @@
                 <p class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
             </div>
             <div class="invite__map">
-                <img class="invite__pin" src="images/map-pin@1x.png" />
+                <img class="invite__pin" src="images/map-pin.svg" />
             </div>
         </section>
-        <div class="footer__title">
-            <img src="images/footer-logo.svg" />
-        </div>
-        <div class="footer__socials">
-            <img src="images/m-vk.svg" />
-            <img src="images/m-insta.svg" />
-            <img src="images/m-fb.svg" />
-        </div>
-        <div class="footer__academy">
-            <span class="footer__item">HTML Academy</span>
-            <img class="footer__item" src="images/htmlacademy.svg" />
-        </div>
+        <section class="footer__content">
+            <div class="footer__title">
+                <img class="footer__title" src="images/footer-logo.svg" />
+            </div>
+            <div class="footer__socials">
+                <img src="images/m-vk.svg" />
+                <img src="images/m-insta.svg" />
+                <img src="images/m-fb.svg" />
+            </div>
+            <div class="footer__academy">
+                <span class="footer__item">HTML Academy</span>
+                <img class="footer__item" src="images/htmlacademy.svg" />
+            </div>
+        </section>
     </footer>
     <script src="js/menu.js"></script>
     <script src="js/animate.js"></script>

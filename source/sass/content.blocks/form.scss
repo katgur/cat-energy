@@ -107,3 +107,32 @@
         margin-top: var(--indent-s);
     }
 }
+
+@media (min-width: 1200px) {
+    .flex {
+        display: flex;
+    }
+
+    .flex__columns_two > * {
+        flex-basis: 50%;
+    }
+
+    .flex__columns_four > * {
+        flex-basis: 25%;
+    }
+
+    .form__section_delimiter_true {
+        border-bottom: 0;
+    }
+
+    .form__section_delimiter_true:nth-child(2) {
+        border: 1px solid var(--bgr-border);
+        padding: 0;
+        margin: var(--indent-m);
+        padding-left: var(--indent-m);
+    }
+
+    .form__item_gap {
+        padding-right: var(--indent-xxxl);
+    }
+}

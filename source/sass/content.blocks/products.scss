@@ -1,7 +1,6 @@
 @import '../base.blocks/theme.layer/theme.scss';
 @import '../base.blocks/layout.layer/layout.scss';
 @import '../base.blocks/patterns.layer/button.scss';
-@import '../base.blocks/layout.layer/grid.scss';
 
 .products {
     @extend %theme;
@@ -32,9 +31,8 @@
         }
     }
 
-    &__image {
+    &__picture {
         grid-area: product-image;
-        width: 100%;
     }
 
     &__title {
@@ -53,17 +51,20 @@
     }
 
     &__button {
+        @include button;
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
         &_color {
             &_accent {
                 @extend %theme_color_accent;
-                @include button;
                 grid-area: product-link;
             }
 
             &_gray {
                 @extend %theme_color_dark;
-                @include button;
-                width: 100%;
                 margin-top: var(--indent-xs);
             }
         }
@@ -82,14 +83,21 @@
             @include theme_font_s;
         }
     }
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 700px) {
     .products {
         &__list {
-            @include grid__container_columns_2;
+            display: flex;
+            flex-wrap: wrap;
             column-gap: var(--indent-xxxxl);
             row-gap: var(--indent-xxxxxl);
+            margin-top: 70px;
         }
 
         &__item {
@@ -104,12 +112,16 @@
                 &_product {
                     @include theme;
                     @include theme_color_dark;
-                    background: linear-gradient(white 20%, var(--bgr-default) 20%);
                     text-align: center;
                 }
 
                 &_more {
                     border: 1px solid var(--bgr-border);
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
                 }
             }
         }
@@ -136,23 +148,15 @@
             margin-top: var(--indent-xs);
         }
 
-        &__button {
-            &_color {    
-                &_gray {
-                    margin-top: var(--indent-xxxxxl);
-                }
-            }
+        &__image {
+            width: 100%;
+            margin-top: -70px;
         }
-    
     }
 }
 
 @media (min-width: 1200px) {
     .products {
-        &__list {
-            @include grid__container_columns_4;
-        }
-
         &__item {
             width: 150px;
         }

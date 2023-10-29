@@ -11,6 +11,7 @@
         background-size: 50%;
         background-position: 50% 50%;
         margin-bottom: 200px;
+        text-align: center;
     }
 
     &_type_gift {
@@ -18,12 +19,13 @@
         background-size: 100%;
         background-position: 0 65%;
         flex: 1;
+        text-align: center;
     }
 }
 
 .promo__foreground {
     @include layout__container;
-    @include layout__container_align_center;
+    margin: 0 auto;
     width: 300px;
 }
 
@@ -71,13 +73,22 @@
         color: var(--text-secondary);
         margin-bottom: 0;
         height: 650px;
+        text-align: left;
+        margin-left: 15%;
+        margin: 0;
+    }
+
+    .promo_type_gift {
+        text-align: center;
+        padding: var(--indent-xl) 0;
+    }
+
+    .promo__foreground_type_gift {
+        margin: 0 auto;
     }
 
     .promo__foreground {
-        text-align: left;
         width: 400px;
-        margin: 0;
-        margin-left: 15%
     }
 
     .promo__title {
@@ -118,7 +129,9 @@
         background-position: 65% 30%;
         color: var(--text-secondary);
         margin-bottom: 0;
+        padding-top: var(--indent-xxxxxl);
         height: 600px;
+        margin-left: 5%;
     }
 
     .promo_type_top::after {
@@ -130,17 +143,17 @@
         top: 0;
         right: 0;
         z-index: -1;
-        background: url("images/index-background-mobile.png") no-repeat, rgb(105, 174, 60);
+        background: url("images/index-background-desktop.png") no-repeat, rgb(105, 174, 60);
         background-position: 200% 0;
     }
 
     .promo__foreground {
-        margin-left: 5%;
-        padding-top: var(--indent-xxxxxl);
+        margin-left: 0;
     }
 
     .promo_type_gift {
         width: auto;
+        padding: 0;
     }
 
     .promo__foreground_type_gift {

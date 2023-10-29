@@ -1,19 +1,13 @@
 @import '../base.blocks/layout.layer/layout.scss';
 @import '../base.blocks/patterns.layer/image.scss';
 @import '../base.blocks/patterns.layer/clearfix.scss';
-@import '../base.blocks/layout.layer/grid.scss';
 
 .categories {
-    @include grid__container_columns_1;
-    @include layout__container_space-h_m;
+    @include layout__container_indent-h_m;
     @include layout__container_space-v_m;
-    @include clearfix;
-}
-
-@media (min-width: 1200px) {
-    .categories {
-        @include grid__container_columns_2;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .categories__item {
@@ -95,6 +89,10 @@
 }
 
 @media (min-width: 1200px) {
+    .categories__item {
+       flex-basis: 40%;
+    }
+
     .categories__icon {
         float: left;
         width: 70px;

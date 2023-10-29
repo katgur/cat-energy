@@ -2,7 +2,6 @@
 @import '../base.blocks/layout.layer/layout.scss';
 @import '../base.blocks/patterns.layer/image.scss';
 @import '../base.blocks/patterns.layer/clearfix.scss';
-@import '../base.blocks/layout.layer/grid.scss';
 
 .advantages {
     @extend %theme;
@@ -57,13 +56,15 @@
 
 @media (min-width: 700px) {
     .advantages__list {
-        @include grid__container_columns_2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         float: left;
         row-gap: var(--indent-xxxxxl);
     }
 
     .advantages__item {
-        width: 70%;
+        flex-basis: 40%;
         position: relative;
     }
 
@@ -101,15 +102,7 @@
 }
 
 @media (min-width: 1200px) {
-    .advantages {
-        @include layout__container_space-h_xxxxxl;
-    }
-
-    .advantages__list {
-        @include grid__container_columns_4;
-    }
-
     .advantages__item {
-        width: 90%;
+        flex-basis: 20%;
     }
 }
